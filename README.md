@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/2wKt2mk.jpg" width=300px> <b>issues</b>
+<img src="https://i.imgur.com/2wKt2mk.jpg" width=300px>
 
 A neuro-evolution package for all. For more information, visit https://neuralfit.net/.
 
