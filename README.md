@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.imgur.com/qW1uHNl.png" width=300px></p>
+<p align="center"><img src="https://i.imgur.com/qW1uHNl.png" width=400px></p>
 
 <p align="center"><a href="https://badge.fury.io/py/neuralfit"><img src="https://badge.fury.io/py/neuralfit.svg" alt="PyPI version" height="18"></a><a href="https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#alpha">    <img height=18 src="https://img.shields.io/badge/stability-alpha-33bbff.svg" alt="Alpha"></a></p>
 
