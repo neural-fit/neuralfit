@@ -5,7 +5,7 @@
 NeuralFit is a simple neuro-evolution library for Python with an API that is similar to the [Keras](https://keras.io/) library. You can train models with evolution instead of backpropagation in just a few lines of codes. You can also export evolved models to Keras so you can use them in your existing environments without changing a thing. For more information, please visit https://neuralfit.net/. <b>🐛 NeuralFit is currently in the alpha phase and being developed rapidly, expect many bugs and crashes.</b>
 
 ## Installation
-You can install NeuralFit via `pip>=19.3`. Note that currently only Python 3.7, 3.8, 3.9 and 3.10 are supported with the latest version of [NumPy](https://numpy.org/) installed. Furthermore, NeuralFit can only be installed on `x86_64` machines running on Windows or Linux (although not all Linux distributions are supported). 
+You can install NeuralFit via `pip>=19.3`. It currently supports Python 3.7-3.10 with the latest version of [NumPy](https://numpy.org/) installed. Furthermore, NeuralFit is tested and supported on 64-bit machines running Windows or Ubuntu. 
 
 ```
 pip install neuralfit
