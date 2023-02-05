@@ -5,13 +5,13 @@ import numpy as np
 x = np.asarray([[0,0], [0,1], [1,0], [1,1]])
 y = np.asarray([[0], [1], [1], [0]])
 
-# Define evaluation function
+# Define evaluation function (MSE)
 def evaluate (genomes):
     losses = np.zeros(len(genomes))
 
     for i in range(len(genomes)):
         for j in range(x.shape[0]):
-            result = genomes[i].predict(x[j])[-1]
+            result = genomes[i].predict(x[j])
             losses[i] += (result - y[j])**2
     
     return losses/x.shape[0]
@@ -20,7 +20,7 @@ def evaluate (genomes):
 model = nf.Model(2, 1)
 
 # Compile and evolve
-model.compile(loss='mse', monitors=['size'])
+model.compile(monitors=['size'])
 model.func_evolve(evaluate)
 
 # Make predictions
