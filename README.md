@@ -26,7 +26,7 @@ y = np.asarray([[0], [1], [1], [0]])
 model = nf.Model(2, 1)
 
 # Compile and evolve
-model.compile('alpha', loss='mse', monitors=['size'])
+model.compile(loss='mse', monitors=['size'])
 model.evolve(x,y)
 ```
 
@@ -69,7 +69,7 @@ y = np.reshape(y, (4,1,1))
 model = nf.Model(1,1, recurrent = True)
 
 # Compile and evolve
-model.compile(optimizer='alpha', loss='mse', monitors=['size'])
+model.compile(loss='mse', monitors=['size'])
 model.evolve(x, y, epochs=500)
 ```
 
