@@ -9,7 +9,7 @@ y = np.asarray([[0], [1], [1], [0]])
 model = nf.Model(2, 1)
 
 # Compile and evolve
-model.compile('alpha', loss='mse', monitors=['size'])
+model.compile(loss='mse', monitors=['size'])
 model.evolve(x,y)
 
 # Make predictions
