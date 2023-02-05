@@ -15,7 +15,7 @@ y = np.reshape(y, (4,1,1))
 model = nf.Model(1,1, recurrent = True)
 
 # Compile and evolve
-model.compile(optimizer='alpha', loss='mse', monitors=['size'])
+model.compile(loss='mse', monitors=['size'])
 model.evolve(x, y, epochs=500)
 
 # Make predictions, take last prediction of each series
