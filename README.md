@@ -82,6 +82,34 @@ print(model.predict(x)[:,-1,0])
 
 It is also possible to define a target output series that has the length of each input series, which is useful for stock market prediction for example. Please keep an eye on our [examples page](https://neuralfit.net/examples/), as more recurrent examples will be added soon. 
 
+## Custom evaluation functions
+If your task does not have a supervised dataset, you can pass your own evaluation function to be used in the evolution process. The above feedforward XOR example can be for example adapted as follows:
+
+```python
+# Define dataset
+x = np.asarray([[0,0], [0,1], [1,0], [1,1]])
+y = np.asarray([[0], [1], [1], [0]])
+
+# Define evaluation function (MSE)
+def evaluate (genomes):
+    losses = np.zeros(len(genomes))
+
+    for i in range(len(genomes)):
+        for j in range(x.shape[0]):
+            result = genomes[i].predict(x[j])
+            losses[i] += (result - y[j])**2
+    
+    return losses/x.shape[0]
+
+# Define model (2 inputs, 1 output)
+model = nf.Model(2, 1)
+
+# Compile and evolve
+model.compile(monitors=['size'])
+model.func_evolve(evaluate)
+```
+
+This can also be done for tasks where recurrency (i.e. memory) is required. Just make sure to `clear()` the genomes before each series, as is done in the [recurrent XOR example](https://github.com/neural-fit/neuralfit/blob/main/example_recurrent_func.py).
 
 ## Issues?
 Found a bug? Want to suggest a feature? Or have a general question about the workings of NeuralFit? Head over to the [issues section](https://github.com/neural-fit/neuralfit/issues) and feel free to create an issue. Note that any questions about licenses or payments should be sent to info@neuralfit.net. 
