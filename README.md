@@ -49,7 +49,7 @@ keras_model = model.to_keras()
 There is much more to discover about NeuralFit, and new features are being added rapidly. Please visit the official [documentation](https://neuralfit.net/documentation/) for more information or follow one of our [examples](https://neuralfit.net/examples/). 
 
 ## Recurrent models
-It is also possible to evolve recurrent models, although they can not (yet) be exported to Keras. These models can evolve backwards connections that allow models to have memories, making them ideal for timeseries prediction. The above XOR dataset can be transformed to a timeseries, where each input feature is inputted sequentially instead of all at once.
+It is also possible to evolve recurrent models, although they cannot (yet) be exported to Keras. These models can evolve backwards connections that allow models to have memory, making them ideal for timeseries prediction. The above XOR dataset can be transformed to a timeseries, where each input feature is inputted sequentially instead of all at once.
 
 ```python
 import neuralfit as nf
