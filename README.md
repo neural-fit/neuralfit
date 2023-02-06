@@ -46,7 +46,12 @@ model.save('model.nf')
 keras_model = model.to_keras()
 ```
 
-There is much more to discover about NeuralFit, and new features are being added rapidly. Please visit the official [documentation](https://neuralfit.net/documentation/) for more information or follow one of our [examples](https://neuralfit.net/examples/). 
+There is much more to discover about NeuralFit, and new features are being added rapidly. Please visit the official [documentation](https://neuralfit.net/documentation/) for more information or follow one of our [examples](https://neuralfit.net/examples/). One of the examples shows a method to [visualize the evolved model](https://neuralfit.net/examples/visualization/), which results in the pictures below.
+
+<p align="middle">
+<img src="https://i.imgur.com/3iz3dEv.png" width=49% height=49%>
+<img src="https://i.imgur.com/Dpbm8vD.png" width=49% height=49%>
+</p>
 
 ## Recurrent models
 It is also possible to evolve recurrent models, although they cannot (yet) be exported to Keras. These models can evolve backwards connections that allow models to have memory, making them ideal for timeseries prediction. The above XOR dataset can be transformed to a timeseries, where each input feature is inputted sequentially instead of all at once.
@@ -80,7 +85,12 @@ After the model has evolved, we can give it timeseries and extract the last outp
 print(model.predict(x)[:,-1,0])
 ```
 
-It is also possible to define a target output series that has the length of each input series, which is useful for stock market prediction for example. Please keep an eye on our [examples page](https://neuralfit.net/examples/), as more recurrent examples will be added soon. 
+It is also possible to define a target output series that has the length of each input series, which is useful for stock market prediction for example. Please keep an eye on our [examples page](https://neuralfit.net/examples/), as more recurrent examples will be added soon. Again, it is possible to [visualize the model](https://neuralfit.net/examples/visualization/), which will now likely include backwards and self-connections. 
+
+<p align="middle">
+<img src="https://i.imgur.com/EnkKbxD.png" width=49% height=49%>
+<img src="https://i.imgur.com/9e4qyEZ.png" width=49% height=49%>
+</p>
 
 ## Custom evaluation functions
 If your task does not have a supervised dataset, you can pass your own evaluation function to be used in the evolution process. The above feedforward XOR example can be for example adapted as follows:
