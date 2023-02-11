@@ -2,7 +2,7 @@
 
 <p align="center"><a href="https://badge.fury.io/py/neuralfit"><img src="https://badge.fury.io/py/neuralfit.svg" alt="PyPI version" height="18"></a><a href="https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#alpha">    <img height=18 src="https://img.shields.io/badge/stability-alpha-33bbff.svg" alt="Alpha"></a></p>
 
-NeuralFit is a simple neuro-evolution library for Python with an API that is similar to the [Keras](https://keras.io/) library. You can train models with evolution instead of backpropagation in just a few lines of code. You can also export evolved models to Keras so you can use them in your existing environments without changing a thing. For more information, please visit https://neuralfit.net/. <b>🐛 NeuralFit is currently in the alpha phase and being developed rapidly, expect many bugs and crashes.</b>
+NeuralFit is a simple neuro-evolution library for Python with an API that is similar to the [Keras](https://keras.io/) library. You can train models with evolution instead of backpropagation in just a few lines of code. You can also export evolved models to Keras so you can use them in your existing environments without changing a thing. For more information, please visit https://neuralfit.net/. NeuralFit is currently in the alpha phase and being developed rapidly, expect many bugs and crashes 🐛.
 
 ## Installation
 NeuralFit is tested and supported on 64-bit machines running Windows or Ubuntu with Python 3.7-3.10 installed. You can install NeuralFit via `pip` with version 19.3 or higher.
@@ -10,6 +10,8 @@ NeuralFit is tested and supported on 64-bit machines running Windows or Ubuntu w
 ```
 pip install neuralfit
 ```
+
+**If you want to export models to Keras, make sure you also have `tensorflow` installed!**
 
 ## Get started
 As an example, you can evolve a model to learn the [XOR gate](https://en.wikipedia.org/wiki/XOR_gate) as follows.
